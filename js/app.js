@@ -1,6 +1,13 @@
+// Control para que el SW funcionte en GitPages
+var url = window.location.href;
+var swLocation = '/pwa-twittor/sw.js';
+
 // Registrar el SW
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/sw.js');
+    if (url.indludes('localhost')) { // Control para que el SW funcionte en GitPages
+        swLocation = '/sw.js';
+    }
+    navigator.serviceWorker.register(swLocation);
 }
 
 // Referencias de jQuery
