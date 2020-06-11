@@ -4,7 +4,7 @@ var swLocation = '/pwa-twittor/sw.js';
 
 // Registrar el SW
 if (navigator.serviceWorker) {
-    if (url.indludes('localhost')) { // Control para que el SW funcionte en GitPages
+    if (url.includes('localhost')) { // Control para que el SW funcionte en GitPages
         swLocation = '/sw.js';
     }
     navigator.serviceWorker.register(swLocation);
